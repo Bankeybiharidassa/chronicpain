@@ -1,13 +1,13 @@
-Translate docs/en/chronic_pain_model_v2_en.md into German.
+Translate both SSOT English files into German:
+- docs/en/chronic_pain_model_summary.md -> docs/de/chronic_pain_model_summary_de.md
+- docs/en/chronic_pain_model_summary_v_2.md -> docs/de/chronic_pain_model_summary_v_2_de.md
 
 Requirements:
-- Preserve heading numbering exactly.
-- Preserve section order.
-- Preserve lists and diagram structures.
+- Preserve heading structure and order.
+- Preserve lists and diagram/code block structures.
 - Preserve all URLs.
-- Follow the terminology mapping.
 - Do not add interpretation.
 - Do not modify any binary file.
 
 Validation:
-Compare heading counts and URL counts with the English source.
+Compare heading counts and URL counts with each English source.
