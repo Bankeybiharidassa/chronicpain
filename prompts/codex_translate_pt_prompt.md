@@ -1,13 +1,14 @@
-Translate docs/en/chronic_pain_model_v2_en.md into European Portuguese.
+Translate both SSOT English files into European Portuguese:
+- docs/en/chronic_pain_model_summary.md -> docs/pt-PT/chronic_pain_model_summary_pt-PT.md
+- docs/en/chronic_pain_model_summary_v_2.md -> docs/pt-PT/chronic_pain_model_summary_v_2_pt-PT.md
 
 Requirements:
 - Use PT-PT only.
-- Preserve heading numbering.
-- Preserve section order.
-- Preserve lists and diagrams.
+- Preserve heading structure and order.
+- Preserve lists and diagram/code block structures.
 - Preserve all URLs.
-- Follow the terminology mapping.
+- Do not add interpretation.
 - Do not modify binary files.
 
 Validation:
-Compare heading counts and URL counts with the English source.
+Compare heading counts and URL counts with each English source.

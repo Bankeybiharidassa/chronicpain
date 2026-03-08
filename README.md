@@ -4,9 +4,16 @@ This repository is organized for deterministic multilingual documentation of the
 
 ## Single Source of Truth (SSOT)
 
-- `docs/en/chronic_pain_model_v2_en.md` is the authoritative English V2 source.
-- `docs/de/chronic_pain_model_v2_de.md` and `docs/pt-PT/chronic_pain_model_v2_pt-PT.md` are strict 1:1 translations.
-- Section numbering, heading order, paragraph boundaries, lists, diagrams, and references are alignment-locked.
+The authoritative English sources are:
+
+- `docs/en/chronic_pain_model_summary.md`
+- `docs/en/chronic_pain_model_summary_v_2.md`
+
+Translations are maintained from these SSOT files:
+
+- German: `docs/de/chronic_pain_model_summary_de.md`, `docs/de/chronic_pain_model_summary_v_2_de.md`
+- Dutch: `docs/nl/chronic_pain_model_summary_nl.md`, `docs/nl/chronic_pain_model_summary_v_2_nl.md`
+- European Portuguese: `docs/pt-PT/chronic_pain_model_summary_pt-PT.md`, `docs/pt-PT/chronic_pain_model_summary_v_2_pt-PT.md`
 
 ## Binary Asset Protection
 
@@ -14,5 +21,6 @@ This repository is organized for deterministic multilingual documentation of the
 
 ## Drift Detection
 
-- `docs/source-map/section_alignment_map.md` tracks section-level alignment across EN, DE, and PT-PT documents.
+- `docs/source-map/section_alignment_map.md` tracks section-level alignment across SSOT documents and language variants.
+- `docs/source-map/file_inventory.md` provides an inventory of repository files used in this deterministic build.
 - Structural drift detection depends on heading, URL, and diagram parity checks.

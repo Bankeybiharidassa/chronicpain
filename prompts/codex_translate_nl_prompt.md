@@ -1,6 +1,6 @@
-Translate both SSOT English files into German:
-- docs/en/chronic_pain_model_summary.md -> docs/de/chronic_pain_model_summary_de.md
-- docs/en/chronic_pain_model_summary_v_2.md -> docs/de/chronic_pain_model_summary_v_2_de.md
+Translate both SSOT English files into Dutch (NL):
+- docs/en/chronic_pain_model_summary.md -> docs/nl/chronic_pain_model_summary_nl.md
+- docs/en/chronic_pain_model_summary_v_2.md -> docs/nl/chronic_pain_model_summary_v_2_nl.md
 
 Requirements:
 - Preserve heading structure and order.
