@@ -1,0 +1,42 @@
+name: Build DOCX
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-docx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Convert Markdown files to DOCX
+        env:
+          PANDOC_IMAGE: docker://pandoc/core:3.8
+        run: |
+          set -euo pipefail
+
+          mkdir -p build/docx
+
+          find docs -mindepth 2 -type f -name '*.md' -print0 | while IFS= read -r -d '' md_file; do
+            relative_path="${md_file#docs/}"
+            output_file="build/docx/${relative_path%.md}.docx"
+            mkdir -p "$(dirname "$output_file")"
+
+            docker run --rm \
+              -v "$PWD":/data \
+              -w /data \
+              "${PANDOC_IMAGE#docker://}" \
+              "$md_file" \
+              -o "$output_file"
+          done
+
+      - name: Upload DOCX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docx
+          path: build/docx/
